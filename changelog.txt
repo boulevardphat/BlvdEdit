@@ -1,0 +1,27 @@
+# NHẬT KÝ THAY ĐỔI & KHÔI PHỤC (ROLLBACK LOG)
+
+==================================================
+LẦN THAY ĐỔI: Lần 3
+THỜI ĐIỂM: Turn 3 (Tái cấu trúc UI phong cách Filmora & Sửa lỗi bố cục)
+NỘI DUNG THAY ĐỔI CHI TIẾT:
+- Layout Tổng thể (`Editor.tsx`): Chuyển sang bố cục 3 phần chuẩn NLE (Left: Media, Center: Preview, Right: Inspector, Bottom: Timeline). Dùng tông màu tối chuẩn Filmora (BG: #141517, Panel: #1e1f22, Border: #2b2d31) và màu nhấn Cyan.
+- Resource Panel (`ResourcePanel.tsx`): Thay thế Sidebar cũ, tạo dạng tab (Media, Audio, Titles, Transitions, Effects) với lưới giao diện chứa tài nguyên mẫu, các icon có hover state rành mạch.
+- Canvas Workspace (`CanvasWorkspace.tsx`): Sửa lại tỉ lệ khung nhìn responsive chuẩn xác không bị lẹm. Chuyển thanh điều khiển Playback (Play/Pause, Skip, Volume, Maximize) xuống liền kề khung Canvas (giống Filmora player).
+- Properties Panel (`PropertiesPanel.tsx`): Thiết kế lại input UI, có viền bo tròn tối màu, label in hoa nhỏ (uppercase bold) mang đậm chất pro.
+- Timeline (`Timeline.tsx`): Dựng lại Track Headers bên trái (có icon Mute, Lock, Eye), khung Timeline bên phải có cuộn ngang, lưới Grid, và cải thiện thiết kế khối Clip. Kích hoạt tính năng phím Delete và Play/Pause giả lập.
+==================================================
+LẦN THAY ĐỔI: Lần 2
+THỜI ĐIỂM: Turn 2 (Xây dựng MVP & Tích hợp yêu cầu cá nhân)
+NỘI DUNG THAY ĐỔI CHI TIẾT:
+- Cài đặt thư viện: `zustand`, `uuid` phục vụ quản lý state.
+- Khởi tạo kiến trúc Store (`lib/store.ts`) và Type (`lib/types.ts`) hỗ trợ tính năng Stretch (scaleX, scaleY độc lập), Keyframe, Font Style (fill/stroke/weight), và Guidelines.
+- Xây dựng modal `NewProjectDialog`: Hỗ trợ setup Tỉ lệ, Độ phân giải (HD, FHD, 4K), và FPS (24, 30, 60).
+- Tạo layout Editor cơ bản bao gồm CanvasWorkspace (Safezone, Guidelines), PropertiesPanel, và Timeline.
+==================================================
+LẦN THAY ĐỔI: Lần 1
+THỜI ĐIỂM: Turn 1 (Khởi tạo dự án & Bản đặc tả)
+NỘI DUNG THAY ĐỔI CHI TIẾT:
+- metadata.json: Cập nhật "name": "Web Video Editor", "description": "A browser-based video editing platform with multi-track timeline, custom project file format (.capweb / .json), media canvas rendering, text/stickers, filters, transitions, and export capability."
+- changelog.txt: Tạo file nhật ký thay đổi và lưu vết cấu hình hệ thống.
+- Cung cấp tài liệu Đặc tả chức năng (SRS), Thiết kế giao diện (UI/UX Architecture), Định dạng file project (.capweb / JSON schema), và Kế hoạch lộ trình xây dựng chi tiết cho ứng dụng Web Video Editor (CapCut/Filmora style).
+==================================================
